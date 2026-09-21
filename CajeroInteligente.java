@@ -20,7 +20,7 @@ public class CajeroInteligente {
         }
         double promedio = (double) total_ventas / cantidad_compras;
 
-        System.out.println("===RESUMEN DE VENTAS");
+        System.out.println("===RESUMEN DE VENTAS===");
         System.out.println("Cantidad de compras: " + cantidad_compras);
         System.out.println("Dinero recaudado: " + total_ventas);
         System.out.println("Compras superiores a $20.000: " + compras_grandes);
@@ -31,5 +31,13 @@ public class CajeroInteligente {
         } else {
             System.out.println("Día normal");
         }
+        int mayor = compras[0];
+        for (int i = 1; i < compras.length; i++) {
+            if (compras[i] > mayor) {
+                mayor = compras[i];
+            }
+            
+        }
+        System.out.println("La compra más alta fue: " + mayor);
     }
 }
